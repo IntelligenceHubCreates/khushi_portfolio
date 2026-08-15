@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="700" viewBox="0 0 2000 700">
+<rect width="100%" height="100%" fill="none"/>
+
+<ellipse cx="310" cy="345" rx="145" ry="115" transform="rotate(-24 310 345)" fill="#F4D21F" stroke="#1B1B1B" stroke-width="10"/>
+<path d="M415 190 C490 135 535 155 560 220 C490 237 445 235 415 190Z" fill="#3E8B4F"/>
+<path d="M215 350 C280 315 345 315 410 350" stroke="#FFF7A4" stroke-width="16" fill="none" stroke-linecap="round"/>
+<text x="555" y="395" font-family="Arial,Helvetica,sans-serif" font-size="260" font-weight="800" letter-spacing="3" fill="#171717">LEMON</text>
+<text x="1300" y="500" font-family="Arial,Helvetica,sans-serif" font-size="88" font-weight="600" letter-spacing="32" fill="#565656">BAGS</text>
+
+</svg>

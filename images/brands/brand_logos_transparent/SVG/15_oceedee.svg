@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="700" viewBox="0 0 2000 700">
+<rect width="100%" height="100%" fill="none"/>
+
+<circle cx="315" cy="350" r="140" fill="none" stroke="#111111" stroke-width="16"/>
+<path d="M235 350 C235 260 310 215 390 245 C440 265 455 310 455 350 C455 440 380 485 300 455 C250 435 235 390 235 350Z" fill="none" stroke="#111111" stroke-width="15"/>
+<text x="1125" y="420" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="285" font-weight="500" letter-spacing="24" fill="#111111">OCEEDEE</text>
+
+</svg>
