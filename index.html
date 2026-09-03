@@ -300,6 +300,11 @@
     inset: 0;
     z-index: 0;
     opacity: 1;
+    /* forces its own GPU-composited layer — without this, mobile Safari/
+       Chrome can visibly jitter/shift fixed elements during touch-scroll */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
   }
   .sticker-wrap{
     position: absolute;
@@ -359,6 +364,9 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
   }
   .hero-filmstrip{
     position: absolute;
@@ -794,10 +802,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-sm);
+    justify-items: center;
   }
 
   .reel-card{
     position: relative;
+    width: 100%;
+    max-width: 230px;
     aspect-ratio: 9 / 16;
     border-radius: 12px;
     overflow: hidden;
