@@ -725,39 +725,19 @@
   .testimonial-card{
     position: relative;
     background: var(--bg-alt);
-    padding: var(--space-lg) var(--space-sm) var(--space-sm);
+    padding: var(--space-sm);
     border-radius: 4px;
     box-shadow: 0 14px 30px rgba(43, 32, 24, 0.12);
     overflow: hidden;
   }
-  .testimonial-mark{
-    position: absolute;
-    top: -0.3em;
-    left: 0.35em;
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: clamp(4.5rem, 6vw, 6.5rem);
-    line-height: 1;
-    color: var(--gold);
-    opacity: 0.45;
-    user-select: none;
-    pointer-events: none;
-  }
-  .testimonial-quote{
-    position: relative;
-    z-index: 1;
-    font-size: var(--fs-base);
-    line-height: 1.75;
-    color: var(--ink);
-    margin: 0;
-  }
-  .testimonial-attribution{
+  /* -- real feedback screenshots stand in for typed quotes — shown at
+     natural aspect ratio so the message text stays fully legible -- */
+  .testimonial-shot{
     display: block;
-    margin-top: var(--space-sm);
-    font-family: var(--font-body);
-    font-size: var(--fs-sm);
-    letter-spacing: 0.04em;
-    color: var(--red);
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 6px 16px rgba(43, 32, 24, 0.18);
   }
 
   @media (max-width: 780px){
@@ -1513,19 +1493,13 @@
 
       <div class="testimonial-grid">
         <div class="testimonial-card reveal" style="--delay: 0s">
-          <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-          <p class="testimonial-quote">[TESTIMONIAL 1]</p>
-          <span class="testimonial-attribution">— [Brand 1]</span>
+          <img class="testimonial-shot" src="images/testimonials/feedback-1.jpg" alt="brand feedback screenshot">
         </div>
         <div class="testimonial-card reveal" style="--delay: 0.15s">
-          <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-          <p class="testimonial-quote">[TESTIMONIAL 2]</p>
-          <span class="testimonial-attribution">— [Brand 2]</span>
+          <img class="testimonial-shot" src="images/testimonials/feedback-2.jpg" alt="brand feedback screenshot">
         </div>
         <div class="testimonial-card reveal" style="--delay: 0.3s">
-          <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-          <p class="testimonial-quote">[TESTIMONIAL 3]</p>
-          <span class="testimonial-attribution">— [Brand 3]</span>
+          <img class="testimonial-shot" src="images/testimonials/feedback-3.jpg" alt="brand feedback screenshot">
         </div>
       </div>
     </div>
@@ -1792,15 +1766,15 @@
        If a caption doesn't contain any keyword, add one explicitly via
        a "category" property on that object as a fallback/override. ---- */
     var REELS = [
-      { permalink: 'https://www.instagram.com/reel/DKhHkb9pK90/', caption: '', category: 'jewellery', thumb: 'images/reels/jewellery-1.jpg', video: 'videos/jewellery-1.mp4' },
-      { permalink: 'https://www.instagram.com/reel/DNFhz5kzi_K/', caption: '', category: 'jewellery', thumb: 'images/reels/jewellery-2.jpg', video: 'videos/jewellery-2.mp4' },
-      { permalink: 'https://www.instagram.com/reel/DPdTcnsk9BO/', caption: '', category: 'jewellery', thumb: 'images/reels/jewellery-3.jpg', video: 'videos/jewellery-3.mp4' },
-      { permalink: 'https://www.instagram.com/reel/DMrmRPdJPzQ/', caption: '', category: 'nightwear', thumb: 'images/reels/nightwear-1.jpg', video: 'videos/nightwear-1.mp4' },
-      { permalink: 'https://www.instagram.com/reel/DWA7sDyDFQh/', caption: '', category: 'nightwear', thumb: 'images/reels/nightwear-2.jpg', video: 'videos/nightwear-2.mp4' },
-      { permalink: 'https://www.instagram.com/reel/DW1GpS2E1ue/', caption: '', category: 'nightwear', thumb: 'images/reels/nightwear-3.jpg', video: 'videos/nightwear-3.mp4' },
-      { permalink: 'https://www.instagram.com/reel/DKoTbV7piR-/', caption: '', category: 'bags', thumb: 'images/reels/bags-1.jpg', video: 'videos/bags-1.mp4' },
-      { permalink: 'https://www.instagram.com/reel/DQqm0_Sk7xn/', caption: '', category: 'bags', thumb: 'images/reels/bags-2.jpg', video: 'videos/bags-2.mp4' },
-      { permalink: 'https://www.instagram.com/reel/DUqAzyLE6Qa/', caption: '', category: 'bags', thumb: 'images/reels/bags-3.jpg', video: 'videos/bags-3.mp4' }
+      { permalink: 'https://www.instagram.com/reel/DKhHkb9pK90/', caption: '', category: 'jewellery', thumb: 'images/reels/jewellery-1.png', video: 'videos/jewellery-1.mp4' },
+      { permalink: 'https://www.instagram.com/reel/DNFhz5kzi_K/', caption: '', category: 'jewellery', thumb: 'images/reels/jewellery-2.png', video: 'videos/jewellery-2.mp4' },
+      { permalink: 'https://www.instagram.com/reel/DPdTcnsk9BO/', caption: '', category: 'jewellery', thumb: 'images/reels/jewellery-3.png', video: 'videos/jewellery-3.mp4' },
+      { permalink: 'https://www.instagram.com/reel/DMrmRPdJPzQ/', caption: '', category: 'nightwear', thumb: 'images/reels/nightwear-1.png', video: 'videos/nightwear-1.mp4' },
+      { permalink: 'https://www.instagram.com/reel/DWA7sDyDFQh/', caption: '', category: 'nightwear', thumb: 'images/reels/nightwear-2.png', video: 'videos/nightwear-2.mp4' },
+      { permalink: 'https://www.instagram.com/reel/DW1GpS2E1ue/', caption: '', category: 'nightwear', thumb: 'images/reels/nightwear-3.png', video: 'videos/nightwear-3.mp4' },
+      { permalink: 'https://www.instagram.com/reel/DKoTbV7piR-/', caption: '', category: 'bags', thumb: 'images/reels/bags-1.png', video: 'videos/bags-1.mp4' },
+      { permalink: 'https://www.instagram.com/reel/DQqm0_Sk7xn/', caption: '', category: 'bags', thumb: 'images/reels/bags-2.png', video: 'videos/bags-2.mp4' },
+      { permalink: 'https://www.instagram.com/reel/DUqAzyLE6Qa/', caption: '', category: 'bags', thumb: 'images/reels/bags-3.png', video: 'videos/bags-3.mp4' }
     ];
 
     var CATEGORY_KEYWORDS = {
