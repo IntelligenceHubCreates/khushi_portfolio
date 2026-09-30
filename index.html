@@ -67,6 +67,15 @@
   *, *::before, *::after{ box-sizing: border-box; }
   html{
     scroll-behavior: smooth;
+    /* horizontal clipping lives here, NOT on body: setting overflow-x on
+       body makes its overflow-y compute to auto, turning body into a second
+       scroll container nested in the page scroller — which is what left
+       dead scrollable space past the footer on mobile */
+    overflow-x: hidden;
+    /* paints the canvas so any overscroll shows cream, never white */
+    background: var(--bg);
+    /* stops the rubber-band scroll past the end of the page on mobile */
+    overscroll-behavior-y: none;
   }
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior: auto; }
@@ -80,7 +89,7 @@
     font-weight: 300;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    overscroll-behavior-y: none;
   }
   img, video{ max-width: 100%; display: block; }
   a{ color: inherit; text-decoration: none; }
@@ -1342,8 +1351,8 @@
 
     <!-- social handles -->
     <div class="hero-social">
-      <a href="#" target="_blank" rel="noopener">@yourinsta</a>
-      <a href="#" target="_blank" rel="noopener">@youryoutube</a>
+      <a href="https://www.instagram.com/tanikhushi10/" target="_blank" rel="noopener">@tanikhushi10</a>
+      <a href="https://www.youtube.com/@tanikhushi10" target="_blank" rel="noopener">@tanikhushi10</a>
       <a href="#" target="_blank" rel="noopener">@yourlinkedin</a>
     </div>
 
@@ -1545,8 +1554,8 @@
       <h2 class="reveal" style="--delay: 0s">social media</h2>
       <p class="social-line reveal" style="--delay: 0.1s">i actively share my work on instagram, youtube &amp; linkedin — where i'm building a growing and engaged audience.</p>
       <div class="social-pills reveal" style="--delay: 0.2s">
-        <a class="social-pill" href="#" target="_blank" rel="noopener">@yourinsta</a>
-        <a class="social-pill" href="#" target="_blank" rel="noopener">@youryoutube</a>
+        <a class="social-pill" href="https://www.instagram.com/tanikhushi10/" target="_blank" rel="noopener">@tanikhushi10</a>
+        <a class="social-pill" href="https://www.youtube.com/@tanikhushi10" target="_blank" rel="noopener">@tanikhushi10</a>
         <a class="social-pill" href="#" target="_blank" rel="noopener">@yourlinkedin</a>
       </div>
     </div>
@@ -1566,13 +1575,13 @@
         <div class="platform-card reveal" style="--delay: 0.2s">
           <div class="platform-card-header">
             <span class="platform-name">instagram</span>
-            <span class="platform-handle">@yourinsta</span>
+            <span class="platform-handle">@tanikhushi10</span>
           </div>
           <div class="platform-stats">
-            <!-- set data-count-target to your real follower / view counts -->
-            <span class="stat-value" data-count-target="0">0</span><span class="stat-label">followers</span>
-            <span class="stat-sep">·</span>
-            <span class="stat-value" data-count-target="0">0</span><span class="stat-label">organic views / month</span>
+            <!-- to add an "organic views / month" stat, copy the pattern below:
+                 <span class="stat-sep">·</span>
+                 <span class="stat-value" data-count-target="NUMBER">0</span><span class="stat-label">organic views / month</span> -->
+            <span class="stat-value" data-count-target="2680">0</span><span class="stat-label">followers</span>
           </div>
           <span class="pill-badge">real &amp; organic</span>
         </div>
@@ -1581,13 +1590,10 @@
         <div class="platform-card reveal" style="--delay: 0.3s">
           <div class="platform-card-header">
             <span class="platform-name">youtube</span>
-            <span class="platform-handle">@youryoutube</span>
+            <span class="platform-handle">@tanikhushi10</span>
           </div>
-          <div class="platform-stats">
-            <span class="stat-value">[X]</span><span class="stat-label">subscribers</span>
-            <span class="stat-sep">·</span>
-            <span class="stat-value">[X]</span><span class="stat-label">views / month</span>
-          </div>
+          <!-- subscriber / view stats omitted until real numbers are available —
+               to add them back, mirror the instagram card's .platform-stats block -->
           <div class="sticky-note">🐣 just started long-form — already taking off!</div>
           <div class="yt-preview reel-card" data-video="videos/youtube-preview.mp4">
             <img class="reel-thumb" src="images/reels/youtube-preview.jpg" alt="youtube preview" loading="lazy">
@@ -1619,7 +1625,7 @@
         <span class="collab-tag">Product Reviews</span>
       </div>
 
-      <a class="collab-email reveal" style="--delay: 0.3s" href="mailto:your@email.com">your@email.com</a>
+      <a class="collab-email reveal" style="--delay: 0.3s" href="mailto:tanikhushi12@gmail.com">tanikhushi12@gmail.com</a>
     </div>
   </section>
 
@@ -1638,8 +1644,8 @@
       <hr class="footer-divider reveal" style="--delay: 0.1s">
       <p class="footer-endtext reveal" style="--delay: 0.15s">the end.</p>
       <div class="footer-social reveal" style="--delay: 0.2s">
-        <a href="#" target="_blank" rel="noopener">@yourinsta</a>
-        <a href="#" target="_blank" rel="noopener">@youryoutube</a>
+        <a href="https://www.instagram.com/tanikhushi10/" target="_blank" rel="noopener">@tanikhushi10</a>
+        <a href="https://www.youtube.com/@tanikhushi10" target="_blank" rel="noopener">@tanikhushi10</a>
         <a href="#" target="_blank" rel="noopener">@yourlinkedin</a>
       </div>
       <p class="footer-meta reveal" style="--delay: 0.25s">© 2026 khushi — <a href="#hero">back to top</a></p>
