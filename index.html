@@ -868,11 +868,9 @@
     z-index: 1;
   }
 
-  /* -- phone-frame chrome for the WORK reels specifically (not the
-     community yt-preview, which stays a plain 16:9 landscape card):
-     a consistent dark bezel + bottom nav bar drawn in CSS, so every
-     card looks identical regardless of what's baked into the source
-     thumbnail/video -- */
+  /* -- phone-frame chrome for the WORK reels: a consistent dark bezel +
+     bottom nav bar drawn in CSS, so every card looks identical regardless
+     of what's baked into the source thumbnail/video -- */
   .reel-row .reel-card{
     background: linear-gradient(160deg, #241c17 0%, #14110f 100%);
     border-radius: 26px;
@@ -1141,17 +1139,6 @@
     color: var(--ink);
   }
 
-  /* -- yt-preview reuses the .reel-card play/pause mechanics (see WORK),
-     just overridden to a 16:9 landscape shape -- */
-  .yt-preview{
-    margin-top: var(--space-sm);
-    aspect-ratio: 16 / 9;
-    border-radius: 6px;
-  }
-  .yt-preview .reel-play{
-    width: 42px;
-    height: 42px;
-  }
 
   .stat-value{
     font-variant-numeric: tabular-nums;
@@ -1353,7 +1340,6 @@
     <div class="hero-social">
       <a href="https://www.instagram.com/tanikhushi10/" target="_blank" rel="noopener">@tanikhushi10</a>
       <a href="https://www.youtube.com/@tanikhushi10" target="_blank" rel="noopener">@tanikhushi10</a>
-      <a href="#" target="_blank" rel="noopener">@yourlinkedin</a>
     </div>
 
     <!-- decorative stickers: just 2 here now, fly in then idle-sway.
@@ -1552,11 +1538,10 @@
   <section id="social">
     <div class="container social-inner">
       <h2 class="reveal" style="--delay: 0s">social media</h2>
-      <p class="social-line reveal" style="--delay: 0.1s">i actively share my work on instagram, youtube &amp; linkedin — where i'm building a growing and engaged audience.</p>
+      <p class="social-line reveal" style="--delay: 0.1s">i actively share my work on instagram &amp; youtube — where i'm building a growing and engaged audience.</p>
       <div class="social-pills reveal" style="--delay: 0.2s">
         <a class="social-pill" href="https://www.instagram.com/tanikhushi10/" target="_blank" rel="noopener">@tanikhushi10</a>
         <a class="social-pill" href="https://www.youtube.com/@tanikhushi10" target="_blank" rel="noopener">@tanikhushi10</a>
-        <a class="social-pill" href="#" target="_blank" rel="noopener">@yourlinkedin</a>
       </div>
     </div>
   </section>
@@ -1586,7 +1571,7 @@
           <span class="pill-badge">real &amp; organic</span>
         </div>
 
-        <!-- card 2: youtube — sticky note + inline preview -->
+        <!-- card 2: youtube — sticky note -->
         <div class="platform-card reveal" style="--delay: 0.3s">
           <div class="platform-card-header">
             <span class="platform-name">youtube</span>
@@ -1595,11 +1580,6 @@
           <!-- subscriber / view stats omitted until real numbers are available —
                to add them back, mirror the instagram card's .platform-stats block -->
           <div class="sticky-note">🐣 just started long-form — already taking off!</div>
-          <div class="yt-preview reel-card" data-video="videos/youtube-preview.mp4">
-            <img class="reel-thumb" src="images/reels/youtube-preview.jpg" alt="youtube preview" loading="lazy">
-            <div class="reel-play" aria-hidden="true"></div>
-            <video class="reel-video" muted loop playsinline preload="none" poster="images/reels/youtube-preview.jpg"></video>
-          </div>
         </div>
 
       </div>
@@ -1621,7 +1601,7 @@
       <div class="collab-tags reveal" style="--delay: 0.15s">
         <span class="collab-tag">UGC Content</span>
         <span class="collab-tag">Brand Campaigns</span>
-        <span class="collab-tag">Intentional Storytelling</span>
+        <span class="collab-tag">Travel Content</span>
         <span class="collab-tag">Product Reviews</span>
       </div>
 
@@ -1646,7 +1626,6 @@
       <div class="footer-social reveal" style="--delay: 0.2s">
         <a href="https://www.instagram.com/tanikhushi10/" target="_blank" rel="noopener">@tanikhushi10</a>
         <a href="https://www.youtube.com/@tanikhushi10" target="_blank" rel="noopener">@tanikhushi10</a>
-        <a href="#" target="_blank" rel="noopener">@yourlinkedin</a>
       </div>
       <p class="footer-meta reveal" style="--delay: 0.25s">© 2026 khushi — <a href="#hero">back to top</a></p>
     </div>
